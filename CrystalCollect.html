@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     
+    </head>
+    <body background="background.jpg">
+        
+        <div id="head">Crystals Collector!</div>
+
+        <div id="introduction">
+        <p>You will be given a random number atthe start of the game.<br><br> There are four crystals below. By clicking on a crystal you will add a specific amout of points to your total score.<br><br> You win the game by matching your total score to random number, you lose the game if your total score goes above the random number. <br><br> The value of each crystal is hidden from you until you click on it. <br><br> Each time when the game starts, the game will change the values of each crystal. </p>
+        </div>
+        
+        <div id="number">
+        <div id="ComputerNum"></div>
+        
+           <ul style="list-style-type:none";>
+               <li id="wins">Wins:</li>
+               <li id="losses">Losses:</li>
+           </ul>
+        
+       </div>
+
+        <div id="button">
+            <button type="button1" id="blue"><img src= blue-button.png></img></button>
+            <button type="button2" id="green"><img src= green-button.png></img></button>
+            <button type="button3" id="red"><img src= red-button.png></img></button>
+            <button type="button4" id="yellow"><img src= yellow-button.png></img></button>
+        </div>
+
+        <div id="totalscore">Your Total Score Is:</div>
+
+        <div id="score">0</div>
+
+        <script>
+            //create variables
+            $(document).ready(function(){
+            var wins = 0;
+            var losses = 0;
+            var computerNum;
+            var total = 0;
+
+            //computer generate a random number (1-100)
+            computerNum = Math.floor(Math.random() * 100) + 10;
+            $("#ComputerNum").html("<h1>"+ computerNum + "</h1>");
+
+            //click one of the buttons, game starts, button genereates random numbers
+            //generate 4 different numbers for buttons (1-9)
+            var numBlue = Math.floor(Math.random() * 9) + 1;
+            var numGreen = Math.floor(Math.random() * 9) + 1;
+            var numRed = Math.floor(Math.random() * 9) + 1;
+            var numYellow = Math.floor(Math.random() * 9) + 1;
+            //PERFECT SO FAR
+             
+            //Reset the game
+            function startover(){
+                total= 0;
+                $("#score").text(total);
+            }
+
+            //Win function
+            function YouWin(){
+                alert("You Won!");
+                wins++;
+                $("#wins").html("<li>Wins:</li>" + wins);
+                startover();
+            }
+            //Lose function
+            function YouLose(){
+                alert("You Lost!");
+                losses++;
+                $("#losses").html("<li>Losses:</li>" + losses);
+            }
+            
+            $("#blue").click(function(){
+                total = total + numBlue;
+                $("#score").text(total);
+                if(total === computerNum){
+                    YouWin();
+                }
+                else if(total>computerNum){
+                    YouLose();
+                }
+            });
+
+             $("#green").click(function(){
+                total = total + numGreen;
+                $("#score").text(total);
+                if(total === computerNum){
+                    YouWin();
+                }
+                else if(total>computerNum){
+                    YouLose();
+                }
+            });
+
+              $("#red").click(function(){
+                total = total + numRed;
+                $("#score").text(total);
+                if(total === computerNum){
+                    YouWin();
+                }
+                else if(total>computerNum){
+                    YouLose();
+                }
+            });
+
+              $("#yellow").click(function(){
+                total = total + numYellow;
+                $("#score").text(total);
+                if(total === computerNum){
+                    YouWin();
+                }
+                else if(total>computerNum){
+                    YouLose();
+                }
+            });
+            
+        });
+                
+
+            
+
+        </script>
+        </body>
+    </body>
+</html>
