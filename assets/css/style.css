@@ -1,0 +1,92 @@
+#head {
+    background-color:rgb(195, 101, 67);
+    color:white;
+    font-size:25px;
+    height:50px;
+    width:360px;
+    padding-top:20px;
+    padding-left:20px;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+#introduction{
+    color:rgb(12, 129, 92);
+    background-color:blanchedalmond;
+    height:300px;
+    width:400px;
+    padding:10px;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(blanchedalmond), to(#f3f3f3), color-stop(.1,blanchedalmond));
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    -webkit-border-top-left-radius: 60px 5px;
+    -webkit-border-top-right-radius: 60px 5px;
+    -webkit-border-bottom-right-radius: 60px 60px ;
+    -webkit-box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3) ;
+}
+
+#number{display:block;
+    height:90px;
+    width:400px;
+    border-block-end: 2px;
+    border-bottom: 10px;
+  
+}
+
+#ComputerNum{
+    margin-left:0;
+    text-align: center;
+    background-color:rgb(10, 176, 110);
+    height:80px;
+    width:160px;
+    float:left;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    }
+            
+
+
+.list{
+    padding-top:1px;
+    padding-left:1px;
+    background-color:rgb(95, 205, 168);
+    height:80px;
+    width:140px;
+    float:left;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+#button{
+    float:none;
+}
+
+.crystal{
+    width:50px;
+    height:50px;
+    padding-right:10px;
+    
+}
+
+#totalscore{
+    text-align: center;
+    color:white;
+    background-color:rgb(27, 151, 70);
+    width:160px;
+    }
+
+#score{
+    padding-top:30px;
+    text-align: center;
+    font-size:35px;
+    color:white;
+    background-color:rgb(27, 151, 70);
+    width:160px;
+    height:80px;
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+div{margin:8px;}
+
